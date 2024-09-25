@@ -8,7 +8,7 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <figure className="img-box w-9 h-9 rounded-lg">
               <img
-                src="/images/wedding1.jpg"
+                src="/images/wedding2.jpg"
                 width={40}
                 height={40}
                 alt="Clare portrait"
@@ -29,12 +29,13 @@ const Hero = () => {
           </h2>
 
           <div className="flex items-center gap-3">
-            <ButtonPrimary label="Download Resume" icon="download" />
+            <ButtonPrimary href="" label="Download Resume" icon="download" classes="" />
 
             <ButtonOutline
               href="#about"
               label="Scroll down"
               icon="arrow_downward"
+              classes=""
             />
           </div>
         </div>
@@ -42,7 +43,7 @@ const Hero = () => {
         <div className="hidden lg:block">
           <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
             <img
-              src="/images/wedding2.jpg"
+              src="/images/wedding1.jpg"
               width={656}
               height={800}
               alt="Clare portrait"

@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types';
 // 1:45
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+interface ProjectCardProps {
+  imgSrc: any;
+  title: string;
+  tags: string[];
+  projectLink?: string;
+  classes?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ imgSrc, title, tags, projectLink, classes }) => {
   return (
     <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
       <figure className="img-box aspect-square rounded-lg mb-4">
@@ -12,7 +20,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
           <h3 className="title-1 mb-3">{title}</h3>
 
           <div className="flex flex-wrap items-center gap-2">
-            {tags.map((label, key) => (
+            {tags.map((label: any, key: any) => (
               <span key={key} className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg">
                 {label}
               </span>

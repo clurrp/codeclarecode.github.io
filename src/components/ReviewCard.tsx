@@ -6,12 +6,19 @@ ratings.fill({
   style: { fontVariationSettings: '"FILL" 1'}
 })
 
+interface ReviewCardProps {
+  content: string;
+  imgSrc: string;
+  name: string;
+  company: string;
+}
+
 const ReviewCard =({
   content,
   imgSrc,
   name,
   company
-}) => {
+}: ReviewCardProps) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg-min-w-[420px]">
       <div className="flex items-center gap-1 mb-3">

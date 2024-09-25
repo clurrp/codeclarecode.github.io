@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ navOpen }) => {
+
+const Navbar = ( navOpen : any ) => {
   const lastActiveLink = useRef<HTMLAnchorElement | null>();
   const activeBox: any = useRef();
   const initActiveBox = () => {
@@ -26,7 +27,7 @@ const Navbar = ({ navOpen }) => {
   }, []);
   window.addEventListener('resize', initActiveBox);
 
-  const activeCurrentLink = (event) => {
+  const activeCurrentLink = (event: any) => {
     lastActiveLink.current?.classList.remove('active');
     event.target.classList.add('active');
     lastActiveLink.current = event.target;

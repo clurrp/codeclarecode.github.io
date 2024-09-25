@@ -22,7 +22,7 @@ const App = () => {
   useGSAP(() => {
     const elements = gsap.utils.toArray(".reveal-up");
 
-    elements.forEach((element) => {
+    elements.forEach((element: any) => {
       gsap.to(element, {
         scrollTrigger: {
           trigger: element,
